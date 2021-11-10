@@ -56,11 +56,11 @@ $(info *** Building StrongHelp Manuals ***)
 
 COLLECTIONFOLDERS := $(addprefix $(SRCDIR)/, $(COLLECTIONS))
 
-.PHONY: clean release collections $(COLLECTIONFOLDERS)
+.PHONY: clean release manuals $(COLLECTIONFOLDERS)
 
-release: collections
+release: manuals
 
-collections: $(COLLECTIONFOLDERS)
+manuals: $(COLLECTIONFOLDERS)
 
 $(COLLECTIONFOLDERS):
 	@$(call show-stage,COLLECTION,$(@))
