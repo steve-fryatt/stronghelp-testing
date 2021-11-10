@@ -36,7 +36,7 @@ PRINTF := printf
 MKDIR := mkdir -p
 CD := cd
 RM := rm -f
-BINDHELP := ./oslib-tools/BindHelp/bindhelp
+BINDHELP := $(PARENT)../oslib-tools/BindHelp/bindhelp
 ZIP := $(GCCSDK_INSTALL_ENV)/bin/zip
 
 # Build Flags
