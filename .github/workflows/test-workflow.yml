@@ -4,7 +4,7 @@ jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
     steps:
-     - name: Build the toolchain
+      - name: Build the toolchain
         run: |
           svn checkout https://svn.code.sf.net/p/ro-oslib/code/trunk/\!OSLib/Tools oslib-tools
           make -C oslib-tools/BindHelp
