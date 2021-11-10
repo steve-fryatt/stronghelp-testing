@@ -8,11 +8,12 @@ jobs:
         run: |
           svn checkout https://svn.code.sf.net/p/ro-oslib/code/trunk/\!OSLib/Tools oslib-tools
           make -C oslib-tools/BindHelp
-          ./oslib-tools/BindHelp/bindhelp
       - name: Check out repository code
         uses: actions/checkout@v2
         with:
           submodules: true
+      - name: Build the manual collections
+        run: make collections
       - run: echo "💡 The ${{ github.repository }} repository has been cloned to the runner."
       - run: echo "🖥️ The workflow is now ready to test your code on the runner."
       - name: List files in the repository
