@@ -13,9 +13,9 @@ jobs:
           svn checkout https://svn.code.sf.net/p/ro-oslib/code/trunk/\!OSLib/Tools oslib-tools
           make -C oslib-tools/BindHelp
       - name: Build the manuals
-        run: make release
+        run: make manuals
       - name: Save the manuals
         uses: actions/upload-artifact@v2
         with:
           name: stronghelp-manuals
-          path: out/
+          path: build/
