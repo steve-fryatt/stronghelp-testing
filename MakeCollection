@@ -37,12 +37,12 @@ MKDIR := mkdir -p
 CD := cd
 RM := rm -f
 BINDHELP := $(GITHUB_WORKSPACE)/oslib-tools/BindHelp/bindhelp
-ZIP := $(GCCSDK_INSTALL_ENV)/bin/zip
+ZIP := python3 -m rozipfile
 
 # Build Flags
 
 BINDHELPFLAGS := -f -r -m
-ZIPFLAGS := -x "*/.svn/*" -r -, -9
+ZIPFLAGS := --create
 
 # Set up escape sequences for colouring terminal output.
 

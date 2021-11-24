@@ -8,14 +8,18 @@ jobs:
         uses: actions/checkout@v2
         with:
           submodules: true
-      - name: Build the toolchain
+      - name: Build BindHelp
         run: |
           svn checkout https://svn.code.sf.net/p/ro-oslib/code/trunk/\!OSLib/Tools oslib-tools
           make -C oslib-tools/BindHelp
+      - name: Install ROZipFile 
+        run: |
+          apt-get install -y python3 python3-pip
+          pip install rozipinfo
       - name: Build the manuals
-        run: make manuals
+        run: make release
       - name: Save the manuals
         uses: actions/upload-artifact@v2
         with:
           name: stronghelp-manuals
-          path: build/
+          path: out/
