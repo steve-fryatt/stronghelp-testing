@@ -14,7 +14,7 @@ jobs:
           make -C oslib-tools/BindHelp
       - name: Install ROZipFile 
         run: |
-          apt-get install -y python3 python3-pip
+          sudo apt-get install -y python3 python3-pip
           pip install rozipinfo
       - name: Build the manuals
         run: make release
