@@ -1,5 +1,8 @@
 name: Build Manuals
-on: [push]
+on:
+  push:
+    branches: ["main"]
+  workflow_dispatch:
 jobs:
   Build-Manuals:
     runs-on: ubuntu-latest
